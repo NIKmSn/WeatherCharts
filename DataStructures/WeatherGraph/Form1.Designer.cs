@@ -36,10 +36,10 @@
             this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
             this.cbStep = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dtpStart = new System.Windows.Forms.DateTimePicker();
             this.dtpEnd = new System.Windows.Forms.DateTimePicker();
+            this.dtpStart = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -53,7 +53,7 @@
             this.tsbGraph});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1009, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1396, 31);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -64,26 +64,26 @@
             this.tsbGraph.Image = ((System.Drawing.Image)(resources.GetObject("tsbGraph.Image")));
             this.tsbGraph.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbGraph.Name = "tsbGraph";
-            this.tsbGraph.Size = new System.Drawing.Size(140, 24);
+            this.tsbGraph.Size = new System.Drawing.Size(140, 28);
             this.tsbGraph.Text = "Построить график";
             this.tsbGraph.Click += new System.EventHandler(this.tsbGraph_Click);
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 360F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.cartesianChart1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.cbStep, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 27);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 31);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1009, 691);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1396, 822);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // dataGridView1
@@ -92,20 +92,20 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 263);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 73);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(498, 425);
+            this.dataGridView1.Size = new System.Drawing.Size(354, 746);
             this.dataGridView1.TabIndex = 0;
             // 
             // cartesianChart1
             // 
             this.cartesianChart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cartesianChart1.Location = new System.Drawing.Point(507, 263);
+            this.cartesianChart1.Location = new System.Drawing.Point(363, 73);
             this.cartesianChart1.Name = "cartesianChart1";
-            this.cartesianChart1.Size = new System.Drawing.Size(499, 425);
+            this.cartesianChart1.Size = new System.Drawing.Size(1030, 746);
             this.cartesianChart1.TabIndex = 1;
             this.cartesianChart1.Text = "cartesianChart1";
             // 
@@ -122,8 +122,9 @@
             this.cbStep.Location = new System.Drawing.Point(3, 3);
             this.cbStep.MaxDropDownItems = 4;
             this.cbStep.Name = "cbStep";
-            this.cbStep.Size = new System.Drawing.Size(498, 39);
+            this.cbStep.Size = new System.Drawing.Size(354, 39);
             this.cbStep.TabIndex = 2;
+            this.cbStep.SelectedIndexChanged += new System.EventHandler(this.cbStep_SelectedIndexChanged);
             // 
             // panel1
             // 
@@ -132,19 +133,28 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(507, 3);
+            this.panel1.Location = new System.Drawing.Point(363, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(499, 65);
+            this.panel1.Size = new System.Drawing.Size(1030, 64);
             this.panel1.TabIndex = 3;
             // 
-            // label1
+            // dtpEnd
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Начальная дата";
+            this.dtpEnd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpEnd.Location = new System.Drawing.Point(819, 30);
+            this.dtpEnd.Name = "dtpEnd";
+            this.dtpEnd.Size = new System.Drawing.Size(202, 22);
+            this.dtpEnd.TabIndex = 3;
+            // 
+            // dtpStart
+            // 
+            this.dtpStart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpStart.Location = new System.Drawing.Point(819, 0);
+            this.dtpStart.Name = "dtpStart";
+            this.dtpStart.Size = new System.Drawing.Size(202, 22);
+            this.dtpStart.TabIndex = 2;
             // 
             // label2
             // 
@@ -155,33 +165,24 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Конечная дата";
             // 
-            // dtpStart
+            // label1
             // 
-            this.dtpStart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpStart.Location = new System.Drawing.Point(288, 0);
-            this.dtpStart.Name = "dtpStart";
-            this.dtpStart.Size = new System.Drawing.Size(202, 22);
-            this.dtpStart.TabIndex = 2;
-            // 
-            // dtpEnd
-            // 
-            this.dtpEnd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpEnd.Location = new System.Drawing.Point(288, 30);
-            this.dtpEnd.Name = "dtpEnd";
-            this.dtpEnd.Size = new System.Drawing.Size(202, 22);
-            this.dtpEnd.TabIndex = 3;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Начальная дата";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1009, 718);
+            this.ClientSize = new System.Drawing.Size(1396, 853);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Погода";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
