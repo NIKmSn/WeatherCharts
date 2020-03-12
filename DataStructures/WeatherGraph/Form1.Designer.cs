@@ -53,7 +53,7 @@
             this.tsbGraph});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1396, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(1396, 27);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -64,7 +64,7 @@
             this.tsbGraph.Image = ((System.Drawing.Image)(resources.GetObject("tsbGraph.Image")));
             this.tsbGraph.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbGraph.Name = "tsbGraph";
-            this.tsbGraph.Size = new System.Drawing.Size(140, 28);
+            this.tsbGraph.Size = new System.Drawing.Size(140, 24);
             this.tsbGraph.Text = "Построить график";
             this.tsbGraph.Click += new System.EventHandler(this.tsbGraph_Click);
             // 
@@ -78,12 +78,12 @@
             this.tableLayoutPanel1.Controls.Add(this.cbStep, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 31);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 27);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1396, 822);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1396, 826);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // dataGridView1
@@ -97,7 +97,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(354, 746);
+            this.dataGridView1.Size = new System.Drawing.Size(354, 750);
             this.dataGridView1.TabIndex = 0;
             // 
             // cartesianChart1
@@ -105,7 +105,7 @@
             this.cartesianChart1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cartesianChart1.Location = new System.Drawing.Point(363, 73);
             this.cartesianChart1.Name = "cartesianChart1";
-            this.cartesianChart1.Size = new System.Drawing.Size(1030, 746);
+            this.cartesianChart1.Size = new System.Drawing.Size(1030, 750);
             this.cartesianChart1.TabIndex = 1;
             this.cartesianChart1.Text = "cartesianChart1";
             // 

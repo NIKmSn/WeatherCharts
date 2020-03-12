@@ -116,7 +116,6 @@ namespace WeatherGraph
 
         private void cbStep_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //TODO: Установка значений дат пользователем
             switch (cbStep.SelectedIndex)
             {
                 //Day
@@ -124,20 +123,19 @@ namespace WeatherGraph
                     {
                         dataGridView1.Columns[0].DefaultCellStyle.Format = @"dd/MM/yyyy";
                         dataGridView1.DataSource = Weather.GetWeatherData(
-                        new DateTime(2010, 01, 01),
-                        new DateTime(2020, 1, 31),
+                        dtpStart.Value,
+                        dtpEnd.Value,
                         Weather.GraphStep.Day);
                         dataGridView1.Update();
                         break;
                     }
-
                 //Week
                 case 1:
                     {
                         dataGridView1.Columns[0].DefaultCellStyle.Format = @"MM/yyyy";
                         dataGridView1.DataSource = Weather.GetWeatherData(
-                        new DateTime(2010, 01, 01),
-                        new DateTime(2020, 1, 31),
+                        dtpStart.Value,
+                        dtpEnd.Value,
                         Weather.GraphStep.Week);
                         dataGridView1.Update();
                         break;
@@ -147,9 +145,9 @@ namespace WeatherGraph
                     {
                         dataGridView1.Columns[0].DefaultCellStyle.Format = @"MM/yyyy";
                         dataGridView1.DataSource = Weather.GetWeatherData(
-                            new DateTime(2010, 01, 01),
-                            new DateTime(2020, 1, 31),
-                            Weather.GraphStep.Month);
+                        dtpStart.Value,
+                        dtpEnd.Value,
+                        Weather.GraphStep.Month);
                         dataGridView1.Update();
                         break;
                     }
@@ -158,11 +156,10 @@ namespace WeatherGraph
                     {
                         dataGridView1.Columns[0].DefaultCellStyle.Format = @"yyyy";
                         dataGridView1.DataSource = Weather.GetWeatherData(
-                        new DateTime(2010, 01, 01),
-                        new DateTime(2020, 1, 31),
+                        dtpStart.Value,
+                        dtpEnd.Value,
                         Weather.GraphStep.Year);
                         dataGridView1.Update();
-                        
                         break;
                     }
             }
